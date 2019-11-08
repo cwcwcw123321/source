@@ -1,0 +1,25 @@
+尺寸策略（sizepolicy）
+
+sizeHint（期望尺寸）
+对于大多数空间来说，sizeHint的值是只读的。
+
+读取期望尺寸
+self.pushButton.sizeHint().width()  77px
+self.pushButton.sizeHint().height() 32px   pushButton
+
+QPushButton   width：77  height：32
+QtextEdit     width：256 height：192
+
+最小期望尺寸：
+self.pushButton.minmumSizeHint().width()  77px
+self.pushButton.minmumSizeHint().height() 32px   pushButton
+
+QPushButton的期望尺寸和最小期望尺寸相同
+
+QTestEdit的期望尺寸和最小期望尺寸78 78
+
+策略  Fixed 固定值
+      minimun
+      maximum
+      Expanding  延展
+      
