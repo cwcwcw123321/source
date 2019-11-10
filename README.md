@@ -1,2 +1,2 @@
 # source
-i am study the PyQt5
+i am studing the PyQt5
