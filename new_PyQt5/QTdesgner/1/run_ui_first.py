@@ -1,5 +1,5 @@
 import sys
-from new_PyQt5 import ui_first
+import ui_first
 from PyQt5.QtWidgets import QApplication,QMainWindow
 
 if __name__ =='__main__':
