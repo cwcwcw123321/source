@@ -10,8 +10,8 @@ class centerForm(QMainWindow):
         #设置主窗口的标题
         self.setWindowTitle('让窗口居中')
         #设置窗口的尺寸
-        self.resize(600,660)
-        self.move(100,100)
+        self.resize(600,360)
+        #self.move(100,100)
         self.center()
     def center(self):
         #获取屏幕坐标系
