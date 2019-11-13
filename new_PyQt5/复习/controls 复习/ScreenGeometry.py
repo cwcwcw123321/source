@@ -1,6 +1,7 @@
 import sys
 from PyQt5.QtWidgets import *
 
+
 def onClick_Button():
     print('1')
     print('widget.x()={}'.format(w.x()))
@@ -21,16 +22,15 @@ def onClick_Button():
     print('widget.framegeometry().height()={}'.format(w.frameGeometry().height()))
 
 
-
-app=QApplication(sys.argv)
-w=QWidget()
-btn=QPushButton(w)
+app = QApplication(sys.argv)
+w = QWidget()
+btn = QPushButton(w)
 btn.setText('点击我')
-btn.move(120,120)
+btn.move(120, 120)
 btn.clicked.connect(onClick_Button)
 
-w.resize(400,400)
-w.move(400,200)
+w.resize(400, 400)
+w.move(400, 200)
 w.setWindowTitle('屏幕坐标系')
 
 w.show()

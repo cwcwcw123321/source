@@ -22,21 +22,23 @@ h   十六进制式字符是允许输入的，但不是必须的（0,1）
 from PyQt5.QtWidgets import *
 import sys
 
+
 class QLineEditMask(QWidget):
     def __init__(self):
         super().__init__()
         self.initUI()
+
     def initUI(self):
         self.setWindowTitle('用掩码限制QLineEdit控件的输入')
-        #创建框架
-        formLayout=QFormLayout()
+        # 创建框架
+        formLayout = QFormLayout()
 
-        ipLineEdit=QLineEdit()
+        ipLineEdit = QLineEdit()
         macLineEdit = QLineEdit()
         dataLineEdit = QLineEdit()
         licenselLineEdit = QLineEdit()
-        #192.168.21.45
-        ipLineEdit.setInputMask('000.000.000.000;_')#不输入显示_
+        # 192.168.21.45
+        ipLineEdit.setInputMask('000.000.000.000;_')  # 不输入显示_
         macLineEdit.setInputMask('HH:HH:HH:HH:HH:HH;_')
         dataLineEdit.setInputMask('0000-00-00')
         licenselLineEdit.setInputMask('>AAAAA-AAAAA-AAAAA-AAAAA-AAAAA;#')
@@ -48,8 +50,9 @@ class QLineEditMask(QWidget):
 
         self.setLayout(formLayout)
 
+
 if __name__ == '__main__':
-    app=QApplication(sys.argv)
-    w=QLineEditMask()
+    app = QApplication(sys.argv)
+    w = QLineEditMask()
     w.show()
     sys.exit(app.exec_())

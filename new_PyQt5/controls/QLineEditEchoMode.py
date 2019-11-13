@@ -12,26 +12,28 @@ EchoMode（回显模式）
 from PyQt5.QtWidgets import *
 import sys
 
+
 class QLineEditEchoMode(QWidget):
     def __init__(self):
         super().__init__()
         self.initUI()
+
     def initUI(self):
         self.setWindowTitle('文本输入框的回显模式')
 
-        formLayout=QFormLayout()#创建表单布局
+        formLayout = QFormLayout()  # 创建表单布局
 
-        normalLineEdit=QLineEdit()
-        noEchoLineEdit=QLineEdit()
-        passwordLineEdit=QLineEdit()
-        passwordEchoOnEditLineEdit=QLineEdit()
+        normalLineEdit = QLineEdit()
+        noEchoLineEdit = QLineEdit()
+        passwordLineEdit = QLineEdit()
+        passwordEchoOnEditLineEdit = QLineEdit()
 
-        formLayout.addRow('Normal',normalLineEdit)
+        formLayout.addRow('Normal', normalLineEdit)
         formLayout.addRow('NoEcho', noEchoLineEdit)
         formLayout.addRow('password', passwordLineEdit)
         formLayout.addRow('passwordEchoEdit', passwordEchoOnEditLineEdit)
 
-        #placeholdtext 灰色提示
+        # placeholdtext 灰色提示
 
         normalLineEdit.setPlaceholderText('Normal')
         noEchoLineEdit.setPlaceholderText('NoEcho')
@@ -45,8 +47,9 @@ class QLineEditEchoMode(QWidget):
 
         self.setLayout(formLayout)
 
+
 if __name__ == '__main__':
-    app=QApplication(sys.argv)
-    w=QLineEditEchoMode()
+    app = QApplication(sys.argv)
+    w = QLineEditEchoMode()
     w.show()
     sys.exit(app.exec_())

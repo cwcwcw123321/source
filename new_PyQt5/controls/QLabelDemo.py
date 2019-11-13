@@ -13,7 +13,7 @@ QLabel常用的信号（事件）
 '''
 
 import sys
-from PyQt5.QtWidgets import QVBoxLayout,QMainWindow,QApplication,QLabel,QWidget
+from PyQt5.QtWidgets import QVBoxLayout, QMainWindow, QApplication, QLabel, QWidget
 from PyQt5.QtGui import QPalette, QPixmap
 from PyQt5.QtCore import Qt
 
@@ -22,6 +22,7 @@ class QLabelDemo(QWidget):
     def __init__(self):
         super().__init__()
         self.initUI()
+
     def initUI(self):
         label1 = QLabel(self)
         label2 = QLabel(self)
@@ -30,8 +31,8 @@ class QLabelDemo(QWidget):
 
         label1.setText('<font color=yellow>这是一个文本标签。</font>')
         label1.setAutoFillBackground(True)  # 自动填充背景
-        paltette=QPalette()                  #创建调色板
-        paltette.setColor(QPalette.Window,Qt.blue)  #设置背景色
+        paltette = QPalette()  # 创建调色板
+        paltette.setColor(QPalette.Window, Qt.blue)  # 设置背景色
         label1.setPalette(paltette)
         label1.setAlignment(Qt.AlignCenter)
 
@@ -40,13 +41,13 @@ class QLabelDemo(QWidget):
         label3.setAlignment(Qt.AlignCenter)
         label3.setToolTip('这是一个图片标签')
         label3.setPixmap(QPixmap('./images/python.jpg'))
-        #如果设为True用浏览器打开网页，如果为False，调用槽函数
+        # 如果设为True用浏览器打开网页，如果为False，调用槽函数
         label4.setOpenExternalLinks(True)
         label4.setText("<a href='https://item.jd.com/12417265.html'>感谢关注《Python从菜鸟到高手》</a>")
         label4.setAlignment(Qt.AlignCenter)
         label4.setToolTip('这是一个超链接')
 
-        vbox=QVBoxLayout()      #垂直布局
+        vbox = QVBoxLayout()  # 垂直布局
 
         vbox.addWidget(label1)
         vbox.addWidget(label2)
@@ -59,21 +60,15 @@ class QLabelDemo(QWidget):
         self.setLayout(vbox)
         self.setWindowTitle('QLabel控件演示')
 
-
     def linkHovered(self):
         print('当鼠标划过label2标签时，触发事件')
 
     def linkClicked(self):
         print('当鼠标单击label4标签时，触发事件')
 
+
 if __name__ == '__main__':
-    app=QApplication(sys.argv)
-    w=QLabelDemo()
+    app = QApplication(sys.argv)
+    w = QLabelDemo()
     w.show()
     sys.exit(app.exec_())
-
-
-
-
-
-
