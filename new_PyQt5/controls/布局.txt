@@ -1,0 +1,14 @@
+
+
+水平布局管理器    QHBoxLayout  可以把添加的控件以水平的顺序依次排开
+
+垂直布局管理器     QVBoxLayout     可以把添加的控件以垂直的顺序依次排开
+
+栅格布局管理器     QGridLayout     可以以网格的形式，把添加的控件以一定矩阵排列
+
+表单布局管理器     QFormLayout     可以以两列的形式排列所添加的控件
+
+水平垂直布局管理器加入     layout=QHBoxLayout()
+                          layout.addWidget(self.button1)
+
+
