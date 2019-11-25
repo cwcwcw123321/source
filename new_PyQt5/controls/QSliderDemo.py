@@ -39,6 +39,7 @@ class SliderDemo(QWidget):
         layout.addWidget(self.slider)
         self.slider.valueChanged.connect(self.valueChange)
         self.setLayout(layout)
+        self.resize(700,400)
 
     def valueChange(self):
         print('当前值：{}'.format(self.slider.value()))
