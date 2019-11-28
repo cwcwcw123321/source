@@ -44,7 +44,9 @@ class QFileDialogDemo(QWidget):
         dialog.setFileMode(QFileDialog.AnyFile)#打开任何文件
         dialog.setFilter(QDir.Files)
         if dialog.exec():
+            # 接受选中文件的路径，默认为列表
             filenames=dialog.selectedFiles()
+            #列表中的第一个元素即是文件路径，以只读的方式打开文件
             f=open(filenames[0],encoding='utf-8',mode='r')
             with f:
                 data=f.read()
