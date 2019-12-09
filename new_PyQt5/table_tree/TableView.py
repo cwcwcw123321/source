@@ -43,12 +43,6 @@ class TableView(QWidget):
         layout.addWidget(self.tableview)
         self.setLayout(layout)
 
-
-
-
-
-
-
 if __name__ == '__main__':
     app=QApplication(sys.argv)
     w=TableView()
