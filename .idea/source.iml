@@ -14,7 +14,7 @@
       <sourceFolder url="file://$MODULE_DIR$/new_PyQt5/QTdesgner/9" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/new_PyQt5/QTdesgner/10" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.7 (source) (2)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">
