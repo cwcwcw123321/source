@@ -12,7 +12,7 @@ class CellSize(QWidget):
         super().__init__()
         self.initUI()
     def initUI(self):
-        self.setWindowTitle('设置单元格字体和颜色')
+        self.setWindowTitle('设置单元格尺寸')
         self.resize(430,230)
 
         layout=QHBoxLayout()
